@@ -1,0 +1,19 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<title>Dodaj post</title>
+<div class="container">
+    <col class="row">
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="{{ form.title.id_for_label }}">Tytuł posta</label>
+            {{ form.title }}
+        </div>
+        <div>
+            <label for="{{ form.body_text.id_for_label }}">Treść posta</label>
+            {{ form.body_text }}
+        </div>
+        <input type="submit" value="Zapisz">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<h1>{{ entry.title }}</h1>
+<p>{{ entry.body_text }}</p>
+<h5>Data publikacji: {{ entry.pub_date|date:"Y.m.d" }}</h5>
+<p>Tagi: {{ entry.tags.all|join:", " }}</p>
+<p>Podobne posty: 
+    {% for sentry in entry.get_similar_entries %}
+        <a href="{{ sentry.get_absolute_url }}">{{sentry}}</a>
+    {% endfor %}
+</p>
+<a href="{% url 'index' %}">POWRÓT</a>
+<a href="{% url 'entry-update' entry.pk %}">Edytuj</a>
+<a href="{% url 'entry-delete' entry.pk %}">Usuń</a>
+
+{% endblock %}

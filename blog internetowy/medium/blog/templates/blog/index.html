@@ -1,0 +1,39 @@
+{% extends "blog/base.html" %}
+{% load blog_tags %}
+{% block content %}
+<div class="row">
+    {% if user.is_authenticated %}
+        <div class="font-weight-bold">
+            <h2>Polecane dla Ciebie: </h2>
+            <ul>
+            {% for entry in user.userprofile.get_entries_for_tags %}
+                <li>
+                    <a href="{% url 'entry-detail' entry.pk %}">
+                        {{ entry.title }} -- {{ entry.pub_date|date:"Y.m.d" }}
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+            <a href="{% url 'entry-create' %}">Dodaj nowy post.</a>
+        </div>
+    {% else %}
+        <div class="col-sm-6">
+            <h2>Ostatnio dodane posty: </h2>
+            <ul>
+                {% for entry in entries %}
+                <li>
+                    <a href="{% url 'entry-detail' entry.pk %}">
+                        {{ entry.title }} -- {{ entry.pub_date|date:"Y.m.d" }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    
+    <div class="col-sm-6">
+        <h5>Opublikowano {{ post_count }} {{ "post"|pl_genitiv:post_count }}</h5>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<form method="post">{% csrf_token %}
+    <p>Czy na pewno chcesz usunąć "{{ object }}"?</p>
+    <button type="submit" class="btn btn-primary">Tak, usuń<i class="fa fa-trash"></i></button>
+</form>
+<a class="btn btn-primary" href="{% url 'entry-detail' object.pk %}">Anuluj</a>
+{% endblock %}
