@@ -1,0 +1,201 @@
+body{
+	background-color: grey;
+	background-image:url(dolars.png);
+}
+table{
+	position: relative;
+	left: 380px;
+	border: 1px solid black;
+	border-collapse: collapse;
+	font-variant: small-caps;
+	
+}
+
+th{
+	position: relative;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+td{
+	background: green;
+	color: white;
+	border: 1px solid black;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+tr:nth-child(even){
+	background: #DEB887;
+}
+
+tr:nth-child(odd){
+	background: white;
+}
+
+ul{
+	position: relative;
+	left: 600px;
+	display: flex;
+	min-height: 5vh;
+	width: 400px
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  width: 400px;
+}
+
+nav li {
+  position: relative;
+  right: 70px;
+  display: inline-block;
+  width: 300px;
+  height:50px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+  line-height: 3em;
+  background: red;
+}
+
+nav a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+  font-family: "Comic Sans MS";
+}
+
+
+
+
+
+h1{
+	background: red;
+	width: 350px;
+	margin: 80px;
+	color: white;
+	border: 2px solid red;
+	font-family: "Comic Sans MS";
+	text-align: center;
+}
+
+
+h2{
+	text-shadow: 1px 1px white;
+	width: 300px;
+	margin: 80px;
+	color: red;
+	font-family: "Comic Sans MS";
+	font-size: 500%;
+}
+
+
+ul{
+	position: relative;
+	left: 600px;
+	display: flex;
+	min-height: 5vh;
+	width: 400px
+}
+
+nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  width: 400px;
+}
+
+nav li{
+  position: relative;
+  right: 70px;
+  display: inline-block;
+  width: 300px;
+  height:50px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+  line-height: 3em;
+  background: red;
+}
+
+nav a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+  font-family: "Comic Sans MS";
+}
+
+.card{
+	background-image:url(funt.png);
+	border: 5px solid white;
+	position: relative;
+	left: 450px;
+	margin: 40px;
+	width: 500px;
+	height: 510px;
+	transition: all 2s ease;
+	transform-style: preserve-3d;
+}
+
+.front, .back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500px;
+	height: 510px;
+	backface-visibility: hidden;
+}
+
+.front{
+	text-align: center;
+}
+
+.back{
+	transform: rotateY(180deg);
+}
+
+.card:hover{
+	transform: rotateY(180deg);
+}
+
+img{
+	position: relative;
+	left: 400px;
+	top: 50px;
+	border: 2px solid black;
+	border-radius: 20px;
+}
+
+h3{
+	font-family: "Comic Sans MS";
+	background: white;
+	text-align: center;
+	font-size: 200%;
+	border: 2px solid black;
+}
+
+h4{
+	font-family: "Comic Sans MS";
+	text-shadow: 1px 1px black;
+	color: red;
+	text-align: center;
+	font-size: 200%
+}
+a{
+	font-family: "Comic Sans MS";
+	text-shadow: 1px 1px black;
+	text-align: center;
+	display:block;
+	font-size: 200%
+}
